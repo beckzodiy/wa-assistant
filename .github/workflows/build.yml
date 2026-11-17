@@ -19,7 +19,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        # Retry once: Maven Central sometimes rate-limits CI runners (HTTP 429).
+        run: ./gradlew assembleDebug --no-daemon || (sleep 30 && ./gradlew assembleDebug --no-daemon --stacktrace)
 
       - uses: actions/upload-artifact@v4
         with:
