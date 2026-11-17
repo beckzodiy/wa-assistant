@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WaAssistant" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">#128C7E</item>
+        <item name="colorSecondary">#25D366</item>
+    </style>
+    <style name="Theme.WaAssistant.Dialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="colorPrimary">#128C7E</item>
+        <item name="windowMinWidthMajor">95%</item>
+        <item name="windowMinWidthMinor">95%</item>
+    </style>
+</resources>
